@@ -1,0 +1,116 @@
+{% extends 'base.html'  %}
+{% load static %}
+{%block title %}গাইডলাইন{% endblock%}
+
+{% block content %}
+<style>
+  .bod{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100wh;
+
+
+  }
+  .container{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .container .box1{
+    position: relative;
+    background:#fff;
+    padding: 20px 40px 40px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .container .box1:nth-child(1)
+  {
+        background: linear-gradient(45deg,#036eb7,#64eaff);
+  }
+  .container .box1:nth-child(2)
+  {
+        background: linear-gradient(45deg,#e91E63,#ed55ff);
+  }
+  .container .box1:nth-child(3)
+  {
+        background: linear-gradient(45deg,#086d35,#67f0a4);
+  }
+  .container .box1:nth-child(1)
+  {
+        background: linear-gradient(45deg,#f05a4f,#f4c030);
+  }
+ 
+</style>
+
+<div class="bod">
+<div class="container">
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid;">শর্ত-১</h2>
+    <h4 style="font-family:'Atma', cursive;">প্রত্যেক ছাত্রছাত্রীকে প্রযুক্তির সঠিক ব্যবহার করতে হবে।</h4>
+
+  </div>
+
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid lawngreen;">শর্ত-২</h2>
+    <h4 style="font-family:'Atma', cursive;" >ওয়েবসাইটের তথ্য গুলো প্রচার প্রসারের জন্য সব ধরনের মিডিয়াতে শেয়ার করতে পারবে।</h4>
+  </div>
+
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid red;">শর্ত-৩</h2>
+    <h4 style="font-family:'Atma', cursive;">কেউ তথ্য বিনিময়ে অর্থ লেনদেন করতে পারবেনা।</h4>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="container">
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid;">শর্ত-৪</h2>
+    <h4 style="font-family:'Atma', cursive;">সঠিক তথ্য দিয়ে রেজিস্ট্রেশন করতে হবে।</h4>
+
+  </div>
+
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid lawngreen;">শর্ত-৫</h2>
+    
+    <h4 style="font-family:'Atma', cursive;">টার্ম পরীক্ষায় ভালো না করলে (৭০%) শিক্ষার্থীকে বোর্ড পরীক্ষায় বসতে দেওয়া হবে না।</h4>
+  </div>
+
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid red">শর্ত-৬</h2>
+    <h4 style="font-family:'Atma', cursive;"> বিদ্যালয়ে পরিচ্ছন্নতার ব্যাপারে প্রত্যেক শিক্ষার্থীকে সতর্ক ও আন্তরিক হতে হবে।</h4>
+    
+  </div>
+</div>
+
+<div class="container">
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid;">শর্ত-৭</h2>
+    <h4 style="font-family:'Atma', cursive;">প্রবেশপত্র ছাড়া কেউ কোনো ধরনের পরীক্ষায় অংশ নেবে না।</h4>
+
+  </div>
+
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid lawngreen;">শর্ত-৮</h2>
+    
+    <h4 style="font-family:'Atma', cursive;">টার্ম পরীক্ষায় ভালো না করলে (৭০%) শিক্ষার্থীকে বোর্ড পরীক্ষায় বসতে দেওয়া হবে না।</h4>
+  </div>
+
+  <div class="box1">
+    <h2 style="border-bottom: 5px solid red">শর্ত-৯</h2>
+    <h4 style="font-family:'Atma', cursive;"> বিদ্যালয়ে পরিচ্ছন্নতার ব্যাপারে প্রত্যেক শিক্ষার্থীকে সতর্ক ও আন্তরিক হতে হবে।</h4>
+    
+  </div>
+</div>
+
+{%endblock%}

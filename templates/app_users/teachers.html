@@ -1,0 +1,439 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} শিক্ষক-পরিচিতি {% endblock %}
+
+
+{% block content %}
+<style>
+  .im img{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+  }
+
+  p.no{
+    font-family: 'Atma', cursive;
+    text-align: center;
+    font-size: 33px;
+    border-bottom: 1px solid black;
+    background-color: rgb(176, 245, 176);
+    color: red;
+}
+</style>
+<div class="border">
+  <p class="no">শিক্ষক-পরিচিতি</p>
+
+  <div class="container">
+  <div class="row mt-20">
+    <div class="col-md-4">
+
+    </div>
+    <div class="head col-md-4">
+      <div class="card" style="border-radius: 30px; background: linear-gradient(45deg,#f05a4f,#f4c030);">
+        <img class="im" src="{% static 'Images/teachers/at.jpg' %}"  alt="" height="200px" width="200px" style="border-radius: 20px; margin: auto;margin-top: 15px;">
+        <div class="para" style="padding: 7px">
+        <h3 class="name"><b>মোঃ আতাউর রহমান</b></h3>
+        <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">প্রধান শিক্ষক</p>
+        <div style="background-color:snow;padding: 9px;font-size: 18px;font-weight: bold;">
+        <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স (গণিত)</b> </p>
+        <p><b>ইমেইল: atahman1@gmail.com</b></p>
+        <p><b>ফোন : ০১৭৮০৫৩১৯৬৬</b></p>
+        <p><b>যোগদানের তারিখ :৫ মে ২০০০</b></p>
+      </div>
+        <div class="main" style="padding-left: 40px;">      
+          <a class="social" href="" target="blank">
+              <i class="fa fa-2x fa-facebook"></i>    
+          </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-twitter"></i>    
+          </a>
+          <a class="social" href="">
+            <i class="fa fa-2x fa-linkedin"></i>    
+        </a>
+      <a class="social" href="">
+          <i class="fa fa-2x fa-youtube"></i>    
+      </a>
+      </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-xl-3">
+      <div class="card" style="border-radius: 20px; background: linear-gradient(45deg,#086d35,#67f0a4);">
+        <img src="{% static 'Images/teachers/kaffi.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+        <div class="para"style="padding: 7px;">
+          <h3 class="name"><b>মোঃ আব্দুল কাফি </b></h3>
+          <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> 
+          <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+          <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+          <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+          <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+          <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+        </div>
+          <div class="main" style="padding-left: 20px;">      
+            <a class="social" href="" target="blank">
+                <i class="fa fa-2x fa-facebook"></i>    
+            </a>
+            <a class="social" href="">
+                <i class="fa fa-2x fa-twitter"></i>    
+            </a>
+            <a class="social" href="">
+              <i class="fa fa-2x fa-linkedin"></i>    
+          </a>
+        <a class="social" href="">
+            <i class="fa fa-2x fa-youtube"></i>    
+        </a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3">
+      <div class="card" style="border-radius: 20px; background: linear-gradient(45deg,#e91E63,#ed55ff);">
+        <img src="{% static 'Images/teachers/m.jpg' %}"alt="" height="200px" width="200px" style=" margin: auto;margin-top: 15px;border-radius: 20px;">
+        <div class="para"style="padding: 7px;">
+          <h5 class="name"><b>মোঃমকারুজ্জামান</b></h5>
+          <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+          <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+          <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+          <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+          <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+        </div>
+          <div class="main" style="padding-left: 20px;">      
+            <a class="social" href="" target="blank">
+                <i class="fa fa-2x fa-facebook"></i>    
+            </a>
+            <a class="social" href="">
+                <i class="fa fa-2x fa-twitter"></i>    
+            </a>
+            <a class="social" href="">
+              <i class="fa fa-2x fa-linkedin"></i>    
+          </a>
+        <a class="social" href="">
+            <i class="fa fa-2x fa-youtube"></i>    
+        </a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3">
+      <div class="card" style="border-radius: 20px;background: linear-gradient(45deg,#f05a4f,#f4c030);">
+        <img src="{% static 'Images/teachers/es.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+        <div class="para"style="padding: 7px;">
+          <h3 class="name"><b>মোঃ মাহিদুল</b></h3>
+          <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+          <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+          <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+          <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+          <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+        </div>
+          <div class="main" style="padding-left: 20px">      
+            <a class="social" href="" target="blank">
+                <i class="fa fa-2x fa-facebook"></i>    
+            </a>
+            <a class="social" href="">
+                <i class="fa fa-2x fa-twitter"></i>    
+            </a>
+            <a class="social" href="">
+              <i class="fa fa-2x fa-linkedin"></i>    
+          </a>
+        <a class="social" href="">
+            <i class="fa fa-2x fa-youtube"></i>    
+        </a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3">
+      <div class="card" style="border-radius: 20px;background: linear-gradient(45deg,#036eb7,#64eaff);">
+        <img src="{% static 'Images/teachers/robi.jpg' %}"alt="" height="200px" width="200px" style="margin: auto;margin-top: 15px;">
+        <div class="para"style="border-radius: 20px;padding: 7px;">
+          <h3 class="name">মোঃরবিউল </b></h3>
+          <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+          <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+          <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+          <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+          <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+        </div>
+
+          <div class="main" style="padding-left: 20px;">      
+            <a class="social" href="" target="blank">
+                <i class="fa fa-2x fa-facebook"></i>    
+            </a>
+            <a class="social" href="">
+                <i class="fa fa-2x fa-twitter"></i>    
+            </a>
+            <a class="social" href="">
+              <i class="fa fa-2x fa-linkedin"></i>    
+          </a>
+        <a class="social" href="">
+            <i class="fa fa-2x fa-youtube"></i>    
+        </a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-xl-3">
+        <div class="card" style="border-radius: 20px;background: linear-gradient(45deg,#f05a4f,#f4c030)">
+          <img src="{% static 'Images/teachers/s.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+          <div class="para"style="padding: 7px;">
+            <h3 class="name"><b>মোছাঃ সাহানাজ</b></h3>
+            <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> 
+            <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+            <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+            <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+            <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+            <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+          </div>
+            <div class="main" style="padding-left: 20px;">      
+              <a class="social" href="" target="blank">
+                  <i class="fa fa-2x fa-facebook"></i>    
+              </a>
+              <a class="social" href="">
+                  <i class="fa fa-2x fa-twitter"></i>    
+              </a>
+              <a class="social" href="">
+                <i class="fa fa-2x fa-linkedin"></i>    
+            </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-youtube"></i>    
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-3">
+        <div class="card" style="border-radius: 20px; background: linear-gradient(45deg,#086d35,#67f0a4);">
+          <img src="{% static 'Images/teachers/h.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+          <div class="para"style="padding: 7px;">
+            <h3 class="name"><b>মোঃ রেজওয়ান</b></h3>
+            <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+            <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+            <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+            <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+            <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+          </div>
+            <div class="main" style="padding-left: 20px;">      
+              <a class="social" href="" target="blank">
+                  <i class="fa fa-2x fa-facebook"></i>    
+              </a>
+              <a class="social" href="">
+                  <i class="fa fa-2x fa-twitter"></i>    
+              </a>
+              <a class="social" href="">
+                <i class="fa fa-2x fa-linkedin"></i>    
+            </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-youtube"></i>    
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-3">
+        <div class="card" style="border-radius: 20px;background: linear-gradient(45deg,#036eb7,#64eaff);">
+          <img src="{% static 'Images/teachers/r.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+          <div class="para"style="padding: 7px;">
+            <h3 class="name"><b>মোঃ মোহাম্মদ</b></h3>
+            <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+            <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+            <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+            <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+            <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+          </div>
+            <div class="main" style="padding-left: 20px">      
+              <a class="social" href="" target="blank">
+                  <i class="fa fa-2x fa-facebook"></i>    
+              </a>
+              <a class="social" href="">
+                  <i class="fa fa-2x fa-twitter"></i>    
+              </a>
+              <a class="social" href="">
+                <i class="fa fa-2x fa-linkedin"></i>    
+            </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-youtube"></i>    
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-3">
+        <div class="card"style="border-radius: 20px;background: linear-gradient(45deg,#e91E63,#ed55ff);">
+          <img src="{% static 'Images/teachers/ovi.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+          <div class="para"style="padding: 7px;">
+            <h3 class="name"><b>মোঃমিজানুর</b></h3>
+            <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+            <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+            <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+            <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+            <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+          </div>
+  
+            <div class="main" style="padding-left: 20px;">      
+              <a class="social" href="" target="blank">
+                  <i class="fa fa-2x fa-facebook"></i>    
+              </a>
+              <a class="social" href="">
+                  <i class="fa fa-2x fa-twitter"></i>    
+              </a>
+              <a class="social" href="">
+                <i class="fa fa-2x fa-linkedin"></i>    
+            </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-youtube"></i>    
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-xl-3">
+        <div class="card" style="border-radius: 20px;background-color:silver">
+          <img src="{% static 'Images/teachers/siddi.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+          <div class="para"style="padding: 7px;">
+            <h3 class="name"><b>মোঃসিদ্দিকুল  </b></h3>
+            <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> 
+            <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+            <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+            <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+            <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+            <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+          </div>
+            <div class="main" style="padding-left: 20px;">      
+              <a class="social" href="" target="blank">
+                  <i class="fa fa-2x fa-facebook"></i>    
+              </a>
+              <a class="social" href="">
+                  <i class="fa fa-2x fa-twitter"></i>    
+              </a>
+              <a class="social" href="">
+                <i class="fa fa-2x fa-linkedin"></i>    
+            </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-youtube"></i>    
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-3">
+        <div class="card" style="border-radius: 20px;background: linear-gradient(45deg,#036eb7,#64eaff)">
+          <img src="{% static 'Images/teachers/mds.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+          <div class="para"style="padding: 7px;">
+            <h3 class="name"><b>মোঃ রবিউল </b></h3>
+            <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+            <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+            <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+            <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+            <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+          </div>
+            <div class="main" style="padding-left: 20px;">      
+              <a class="social" href="" target="blank">
+                  <i class="fa fa-2x fa-facebook"></i>    
+              </a>
+              <a class="social" href="">
+                  <i class="fa fa-2x fa-twitter"></i>    
+              </a>
+              <a class="social" href="">
+                <i class="fa fa-2x fa-linkedin"></i>    
+            </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-youtube"></i>    
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-3">
+        <div class="card" style="border-radius: 20px;background: linear-gradient(45deg,#f05a4f,#f4c030)">
+          <img src="{% static 'Images/teachers/es.jpg' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+          <div class="para"style="padding: 7px;">
+            <h3 class="name"><b>মোঃরাকিব হক  </b></h3>
+            <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+            <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+            <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+            <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+            <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+          </div>
+            <div class="main" style="padding-left: 20px">      
+              <a class="social" href="" target="blank">
+                  <i class="fa fa-2x fa-facebook"></i>    
+              </a>
+              <a class="social" href="">
+                  <i class="fa fa-2x fa-twitter"></i>    
+              </a>
+              <a class="social" href="">
+                <i class="fa fa-2x fa-linkedin"></i>    
+            </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-youtube"></i>    
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-3">
+        <div class="card" style="border-radius: 20px; background: linear-gradient(45deg,#086d35,#67f0a4);">
+          <img src="{% static 'Images/teachers/download.png' %}"alt="" height="200px" width="200px" style="border-radius: 20px;margin: auto;margin-top: 15px;">
+          <div class="para"style="padding: 7px;">
+            <h3 class="name"><b>মোছাঃ নাজনিন </b></h3>
+            <p class="nam" style="font-weight: bold;text-align: center;font-size: 20px;color:royalblue;font-weight: bold;background-color:wheat;">সহকারী শিক্ষক</p> <div style="background-color:snow;padding: 9px;font-size: 15px;font-weight: bold;">
+            <p><b>শিক্ষাগত যোগ্যতা : মাস্টার্স </b> </p>
+            <p><b>ইমেইল: kaffim1@gmail.com</b></p>
+            <p><b>ফোন : ০১৭৮০৫৩১৯৬৯</b></p>
+            <p><b>যোগদানের তারিখ :১০/০৩/০৩</b></p>
+          </div>
+  
+            <div class="main" style="padding-left: 20px;">      
+              <a class="social" href="" target="blank">
+                  <i class="fa fa-2x fa-facebook"></i>    
+              </a>
+              <a class="social" href="">
+                  <i class="fa fa-2x fa-twitter"></i>    
+              </a>
+              <a class="social" href="">
+                <i class="fa fa-2x fa-linkedin"></i>    
+            </a>
+          <a class="social" href="">
+              <i class="fa fa-2x fa-youtube"></i>    
+          </a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+
+  
+
+{% endblock %}

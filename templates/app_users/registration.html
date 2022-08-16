@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}রেজিস্ট্রেশন{% endblock %}
+{% block content %}
+<section class="text-center mt-4">
+  <h2 class="mb-5 font-weight-bold" style="color:#ff5722;font-family: 'Galada', cursive ;border-bottom: 5px solid burlywood;width: fit-content;margin: auto;">" চলো ,নতুন একাউন্ট তৈরী করি "</h2>
+</section>
+
+  {% if registered %}
+    <h1>তুমি সফল ভাবে তোমার একাউন্ট তৈরী করেছ</h1>
+  {% else %}
+      
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form|crispy }}
+        {{ profile_form|crispy }}
+        <div class="row justify-content-center">
+        <div class="col-md-6">
+        <input type="submit" value="একাউন্ট তৈরী করি" class="btn btn-success btn-block" >
+        </div>
+        </div>
+      </form>
+      <div class="div3">
+        <p class="p1">ইতিমধ্যে,আপনার একটি একাউন্ট আছে? <a href="{% url 'user_login' %}">লগ ইন করতে</a></p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <hr>
+  {% endif %}
+{%endblock%}

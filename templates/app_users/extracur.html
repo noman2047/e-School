@@ -1,0 +1,153 @@
+{% extends 'base.html'  %}
+{% load static %}
+{%block title %}পাঠক্রম বহির্ভূত কার্যক্রম{% endblock%}
+
+{% block content %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+  }
+  
+  .container
+  {
+    position:relative;
+    width: 1200px;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+  }
+  .container .card
+  {
+    position: relative;
+    height: 220px;
+    background: linear-gradient(45deg,#f05a4f,#f4c030);
+    display: flex;
+    width: 38%;
+    margin: 3px 3px;
+
+  }
+  .container .card .imgBx
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+  .container .card:hover .imgBx
+  {
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top:calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: #ff0057;
+  
+  }
+  .container .card .imgBx::before
+  {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 6em;
+    color:rgba(255,255, 255, .05);
+    font-weight: 700;
+  }
+  .container .card .img
+  {
+    max-width: 200px;
+    transition: 0.5s ease-in-out;
+  }
+  .container .card:hover .imgBx img
+  {
+    max-width: 200px;
+  }
+  .container .card .content
+  {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+</style>
+<br>
+<h3 class="extrcar" style="text-align: center;margin-bottom: 40px;border: 2px solid black;font-family:'Atma', cursive;padding: 9px; background-color: rgb(176, 245, 176); color: red;">পাঠক্রম বহির্ভূত কার্যক্রম</h3>
+
+<div class="container">
+  <div class="card">
+    <div class="imgBx" data-text="Design">
+      <img src="/static/Images/5.jpg" alt="">
+    </div>
+    <div class="content">
+      <h4 style="font-family:'Atma', cursive;">জাতীয় কর্মসূচি পালন এবং বার্ষিকক্রিয়া অনুষ্ঠান পালন। <h4>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx" data-text="Design1">
+      <img src="/static/Images/7.jpg" alt="">
+    </div>
+    <div class="content">
+      <h4 style="font-family:'Atma', cursive;">প্রতিদিন জাতীয় সঙ্গীত এবং শারীরিক ব্যায়ামের অনুশীলন।<h4>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx" data-text="শারীরিক ব্যায়ামের অনুশীলন">
+      <img src="/static/Images/extracur/1.jpg" alt="">
+    </div>
+    <div class="content">
+      <h4 style="font-family:'Atma', cursive;">বিতর্ক প্রতিযোগিতা<h4>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx" data-text="বিতর্ক প্রতিযোগিতা">
+      <img src="/static/Images/extracur/81.jpg" alt="">
+    </div>
+    <div class="content">
+      <h4 style="font-family:'Atma', cursive;">ইনডোর এবং আউটডোর স্পোর্টস সুবিধা।<h4>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx" data-text="ইনডোর এবং আউটডোর স্পোর্টস সুবিধা।">
+      <img src="/static/Images/extracur/12.jpg" alt="">
+    </div>
+    <div class="content">
+      <h4 style="font-family:'Atma', cursive;">বার্ষিক পিকনিক।<h4>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgBx" data-text="বার্ষিক পিকনিক">
+      <img src="/static/Images/extracur/8.jpg" alt="">
+    </div>
+    <div class="content">
+      <h4 style="font-family:'Atma', cursive;">সামাজিক ও সাংস্কৃতিক অনুষ্ঠান।<h4>
+    </div>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+{%endblock%}

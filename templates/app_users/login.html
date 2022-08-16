@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}লগ-ইন{% endblock %}
+
+{% block image_block %}
+{% endblock %}
+
+{% block content %}
+
+<section class="text-center mt-4">
+  <h2 class="mb-5 font-weight-bold" style="color:#ff5722;font-family: 'Galada', cursive ;border-bottom: 5px solid burlywood;width: fit-content;margin: auto;">" লগ-ইন "</h2>
+              <!-- class row for description-->
+              <div class="row d-flex justify-content-center mb-4">
+                <form action="{% url 'user_login' %}" method="post">
+                  <div class="form-group">
+
+
+                  {% csrf_token %}
+                  <div class="col-md-12">
+                    <div class="row">
+
+
+                  <label for="username">ইউজারের নাম লিখো:</label>
+                  <input type="text" name="username" placeholder="ইউজারের নাম লিখো" class="form-control">
+
+                  <label for="password">পাসওয়ার্ড দাও:</label>
+                  <input type="password" name="password" class="form-control">
+                  </div>
+                  <div class="row justify-content-center">
+                      <input type="submit" value="লগ-ইন" class="btn btn-danger btn-lg mt-3">
+                  </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+              <br>
+              <hr>
+</section>
+{%endblock%}
